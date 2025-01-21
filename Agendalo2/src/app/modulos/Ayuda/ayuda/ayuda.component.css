@@ -1,0 +1,13 @@
+img {
+    height: 25vh;
+    width: 13vw;
+}
+
+.card {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    height: 40vh;
+}

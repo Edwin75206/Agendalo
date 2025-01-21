@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="container ">
+    <h2 class="mb-4">Formulario de Servicio</h2>
+    <form (ngSubmit)="onSubmit()" #servicioForm="ngForm" method="post" id="servicioForm">
+      <!-- ID del Servicio -->
+      <div class="form-group">
+        <label for="idServicio">ID del Servicio:</label>
+        <input type="text" class="form-control" id="idServicio" name="idServicio" [(ngModel)]="servicioData.idServicio" required>
+      </div>
+
+      <!-- Usuario ID -->
+      <div class="form-group">
+        <label for="usuarioID">Usuario ID:</label>
+        <input type="text" class="form-control" id="usuarioID" name="usuarioID" [(ngModel)]="servicioData.usuarioID" required>
+      </div>
+
+      <!-- Nombre del Servicio -->
+      <div class="form-group">
+        <label for="nombreServicio">Nombre del Servicio:</label>
+        <input type="text" class="form-control" id="nombreServicio" name="nombreServicio" [(ngModel)]="servicioData.nombreServicio" required>
+      </div>
+
+      <!-- Tipo de Servicio -->
+      <div class="form-group">
+        <label for="tipoServicio">Tipo de Servicio:</label>
+        <select class="form-control" id="tipoServicio" name="tipoServicio" [(ngModel)]="servicioData.tipoServicio" required>
+          <option value="In Situ">In Situ</option>
+          <option value="Lugar">Lugar</option>
+        </select>
+      </div>
+
+      <!-- Términos -->
+      <div class="form-group">
+        <label for="terminos">Términos:</label>
+        <textarea class="form-control" id="terminos" name="terminos" [(ngModel)]="servicioData.terminos" required></textarea>
+      </div>
+
+      <!-- Condiciones -->
+      <div class="form-group">
+        <label for="condiciones">Condiciones:</label>
+        <textarea class="form-control" id="condiciones" name="condiciones" [(ngModel)]="servicioData.condiciones" required></textarea>
+      </div>
+
+      <!-- Costo -->
+      <div class="form-group">
+        <label for="costo">Costo:</label>
+        <input type="text" class="form-control" id="costo" name="costo" [(ngModel)]="servicioData.costo" required>
+      </div>
+
+      <!-- Descripción -->
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="servicioData.descripcion" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <div *ngIf="mensajeRegistro" class="alert alert-success mt-3">
+      {{ mensajeRegistro }}
+    </div>
+</div>
+</div>

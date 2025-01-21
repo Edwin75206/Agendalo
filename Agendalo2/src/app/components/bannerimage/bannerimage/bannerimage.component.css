@@ -1,0 +1,21 @@
+.banner-image{
+  background-image: url('../../../../assets/fondonavbar.jpg');
+  background-size: cover;
+}
+.bg-dark {
+  background-color: #000 !important; /* Puedes ajustar el color según tus necesidades */
+}
+
+.shadow {
+  box-shadow: 0 4px 2px -2px gray; /* Puedes ajustar la sombra según tus necesidades */
+}
+
+
+.content{
+  background-color: white;
+  border-radius: 10px;
+}
+/*.tab-pane {
+  background-color: white;
+  color: black;
+}*/

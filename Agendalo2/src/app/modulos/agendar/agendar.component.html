@@ -1,0 +1,43 @@
+<!-- citas.component.html -->
+<div class="container-fluid">
+  <h1>Agenda tu cita</h1>
+  <div class="col-lg-6 offset-3">
+    <div class="form-group">
+    <label for="usuarioIdInput">ID del Usuario</label>
+    <input type="text" class="form-control" id="usuarioIdInput" name="usuarioIdInput" [(ngModel)]="citaData.usuarioID" required>
+  </div>
+    <div class="form-group">
+      <label for="Servicio">Servicio</label>
+      <select class="form-control" id="Servicio" name="Servicio" [(ngModel)]="citaData.servicioID" required>
+        <option *ngFor="let servicio of servicios" [value]="servicio.idServicio">{{ servicio.nombreServicio }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="horario">Horario</label>
+      <select class="form-select" multiple aria-label="Multiple select example" [(ngModel)]="citaData.horario" required>
+        <option value="09:00-12:00">9:00-12:00</option>
+        <option value="12:00-15:00">12:00-15:00</option>
+        <option value="15:00-18:00">15:00-18:00</option>
+        <option value="18:00-21:00">18:00-21:00</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dia">Día</label>
+      <select name="dia" id="dias" class="form-select" multiple aria-label="Multiple select example" [(ngModel)]="citaData.dia" required>
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miércoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+        <option value="sábado">Sábado</option>
+        <option value="domingo">Domingo</option>
+      </select>
+    </div>
+    <button type="button" id="btnAgendar" class="btn btn-primary btn-lg" (click)="crearCita()">Agendar</button>
+
+    <div *ngIf="mensajeRegistro" class="alert alert-success mt-3">
+      {{ mensajeRegistro }}
+    </div>
+  </div>
+  <app-comentarios></app-comentarios>
+</div>

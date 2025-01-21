@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+<div class="container ">
+  <h2 class="mb-4">Formulario de Usuario</h2>
+
+<form (ngSubmit)="onSubmit()" #usuarioForm="ngForm" method="post" id="usuarioForm">
+  <!-- ID de Usuario -->
+  <div class="form-group">
+    <label for="idUsuario">ID de Usuario:</label>
+    <input type="text" class="form-control" id="idUsuario" name="idUsuario" [(ngModel)]="userData.idUsuario" required>
+  </div>
+
+  <!-- Nombre Completo -->
+  <div class="form-group">
+    <label for="nombreCompleto">Nombre Completo:</label>
+    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" [(ngModel)]="userData.nombreCompleto" required>
+  </div>
+
+  <!-- Correo Electrónico -->
+  <div class="form-group">
+    <label for="correoElectronico">Correo Electrónico:</label>
+    <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" [(ngModel)]="userData.correoElectronico" required>
+  </div>
+
+  <!-- Contraseña -->
+  <div class="form-group">
+    <label for="password">Contraseña:</label>
+    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userData.password" required>
+  </div>
+
+  <!-- Fecha de Nacimiento -->
+  <div class="form-group">
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="userData.fechaNacimiento" required>
+  </div>
+
+  <!-- Género -->
+  <div class="form-group">
+    <label for="genero">Género:</label>
+    <select class="form-control" id="genero" name="genero" [(ngModel)]="userData.genero" required>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+      <option value="No binario">No binario</option>
+    </select>
+  </div>
+
+  <!-- Lugar de Procedencia -->
+  <div class="form-group">
+    <label for="lugarProcedencia">Lugar de Procedencia:</label>
+    <input type="text" class="form-control" id="lugarProcedencia" name="lugarProcedencia" [(ngModel)]="userData.lugarProcedencia">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+</div>

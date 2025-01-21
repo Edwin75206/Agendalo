@@ -1,0 +1,11 @@
+<h1 mat-dialog-title style="text-align: center; background-color: rgb(255, 135, 79);">Login</h1>
+<div mat-dialog-content style="text-align: center;">
+  <p> {{mensaje}} </p>
+</div>
+<div mat-dialog-actions style="margin-left: 25px;">
+  <button mat-button [mat-dialog-close]="btn" (click)="onButtonClick()">
+  {{ isLoggedIn ? 'Cerrar Sesión' : 'Iniciar Sesión' }}
+</button>
+  <button mat-button [mat-dialog-close]="btn" routerLink="/registroUsuario" >Registrar Usuario</button>
+  <button mat-button [mat-dialog-close]="btn" routerLink="/registroEmpresa" >Registrar Servicio</button>
+</div>

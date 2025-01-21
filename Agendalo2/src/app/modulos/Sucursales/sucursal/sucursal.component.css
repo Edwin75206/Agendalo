@@ -1,0 +1,15 @@
+
+    /* Estilo personalizado para el contenedor del mapa */
+    #map-container {
+      height: 400px; /* Ajusta la altura según tus necesidades */
+      border: 1px solid #0000; /* Borde opcional */
+      border-radius: 8px; /* Bordes redondeados, opcional */
+      overflow: hidden; /* Asegura que el mapa no se desborde */
+      width: 400px;
+    }
+
+    /* Estilo para el iframe del mapa */
+    #google-map {
+      width: 400px;
+      height: 500px;/* Elimina el borde del iframe */
+    }

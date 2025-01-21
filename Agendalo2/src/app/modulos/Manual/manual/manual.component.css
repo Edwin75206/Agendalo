@@ -1,0 +1,14 @@
+.card {
+    height: 80vh;
+    margin: 10px;
+    align-items: center;
+}
+
+img {
+    width: 17vw;
+    height: 17vw;
+}
+
+.row {
+    margin: 20px;
+}

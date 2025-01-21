@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-black text-white" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5" routerLink="/landing">Agendalo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container ms-0 me-0"></div>
+      <ul class="navbar-nav me-3 mb-5 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/agendar">Agenda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link ms-3  active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Servicios
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item"routerLink="/enSitio">En Sitio</a></li>
+            <li><a class="dropdown-item" routerLink="/sucursal">Sucursales</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
+        <img (click)="seleccionar()" class="me-5 login" src="../../../assets/usuario.png" width="50px" height="50x" >
+      </form>
+    </div>
+  </div>
+</nav>

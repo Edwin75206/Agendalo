@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Sección de Comentarios</h2>
+      <form (submit)="agregarComentario()">
+        <div class="form-group">
+          <label for="idUsuario">ID Usuario:</label>
+          <input type="text" id="idUsuario" [(ngModel)]="nuevoComentario.idUsuario" name="idUsuario" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="idServicio">ID Servicio:</label>
+          <input type="text" id="idServicio" [(ngModel)]="nuevoComentario.idServicio" name="idServicio" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcionComentario">Descripción del Comentario:</label>
+          <textarea id="descripcionComentario" [(ngModel)]="nuevoComentario.descripcionComentario" name="descripcionComentario" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Comentario</button>
+      </form>
+      <!-- Mostrar la lista de comentarios -->
+      <ul>
+        <li *ngFor="let comentario of comentarios">
+          {{ comentario.idUsuario }} - {{ comentario.descripcionComentario }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Mostrar los datos del servicio en un formulario -->
+      <h2>Editar Servicio: {{ servicio?.nombreServicio }}</h2>
+
+      <form (ngSubmit)="actualizarServicio()">
+        <div class="form-group">
+          <label for="nombreServicio">Nombre del Servicio:</label>
+          <input type="text" id="nombreServicio" [(ngModel)]="servicio.nombreServicio" name="nombreServicio" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipoServicio">Tipo de Servicio:</label>
+          <input type="text" id="tipoServicio" [(ngModel)]="servicio.tipoServicio" name="tipoServicio" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="terminos">Términos:</label>
+          <textarea id="terminos" [(ngModel)]="servicio.terminos" name="terminos" class="form-control" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="condiciones">Condiciones:</label>
+          <textarea id="condiciones" [(ngModel)]="servicio.condiciones" name="condiciones" class="form-control" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="costo">Costo:</label>
+          <input type="number" id="costo" [(ngModel)]="servicio.costo" name="costo" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" [(ngModel)]="servicio.descripcion" name="descripcion" class="form-control" required></textarea>
+        </div>
+
+        <!-- Agrega más campos del formulario según tus necesidades -->
+
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <button type="button" class="btn btn-secondary" (click)="cancelarEdicion()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

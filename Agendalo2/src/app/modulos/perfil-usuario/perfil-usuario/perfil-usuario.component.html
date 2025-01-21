@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Datos del Usuario</h2>
+  <div *ngIf="usuario">
+    <p><strong>ID de Usuario:</strong> {{ usuario.idUsuario }}</p>
+    <p><strong>Nombre Completo:</strong> {{ usuario.nombreCompleto }}</p>
+    <p><strong>Correo Electrónico:</strong> {{ usuario.correoElectronico }}</p>
+    <!-- Agrega más campos según sea necesario -->
+  </div>
+  <div *ngIf="servicios.length > 0">
+  <h2>Servicios del Usuario</h2>
+  <div *ngFor="let servicio of servicios">
+    <p><strong>Nombre del Servicio:</strong> {{ servicio.nombreServicio }}</p>
+    <p><strong>Tipo de Servicio:</strong> {{ servicio.tipoServicio }}</p>
+    <!-- Agrega más campos según sea necesario -->
+    <p><strong>ID del Servicio:</strong> {{ servicio.idServicio }}</p>
+  </div>
+</div>
+<div *ngIf="serviciosMessage">{{ serviciosMessage }}</div>
+
+
+<div *ngIf="comentarios.length > 0">
+  <h2>Comentarios del Usuario</h2>
+  <div *ngFor="let comentario of comentarios">
+    <p><strong>Texto del Comentario:</strong> {{ comentario.descripcionComentario }}</p>
+    <p><strong>ID del Usuario:</strong> {{ comentario.usuarioID }}</p>
+    <p><strong>ID del Servicio:</strong> {{ comentario.servicioID }}</p>
+    <!-- Agrega más campos según sea necesario -->
+  </div>
+</div>
+<div *ngIf="comentariosMessage">{{ comentariosMessage }}</div>
+</div>
+

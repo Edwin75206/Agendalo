@@ -1,0 +1,29 @@
+.container {
+    height: 150vh;
+    align-items: center;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.container-fluid {
+    background-image: url(../../../assets/fondo_user.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+select, label {
+    margin: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+img#imagen {
+    filter: opacity(0.5);
+  }

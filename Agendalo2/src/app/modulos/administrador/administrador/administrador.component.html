@@ -1,0 +1,188 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+          <a (click)="switchToUsersTable()" class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Usuarios</a>
+        </li>
+      </ul>
+      <div class="tab-content mt-4">
+        <!-- Tabla de Usuarios -->
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+          <table *ngIf="showUsersTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo Electronico</th>
+                <th>Contraseña</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Genero</th>
+                <th>Lugar de Procedencia</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <!-- Agrega más columnas según tus necesidades -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.idUsuario }}</td>
+                <td>{{ user.nombreCompleto }}</td>
+                <td>{{ user.correoElectronico }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.fechaNacimiento }}</td>
+                <td>{{ user.genero }}</td>
+                <td>{{ user.lugarProcedencia }}</td>
+                <td>
+                  <!-- Botón de Editar(click)="editarUsuario(user.idUsuario) -->
+                  <a [routerLink]="['/editar-usuario', user.idUsuario]" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                  <button class="btn btn-danger" (click)="eliminarUsuario(user.idUsuario)">Eliminar</button>
+                </td>
+                <!-- Agrega más celdas según tus necesidades -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+          <a (click)="switchToUsersTable()" class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Servicios</a>
+        </li>
+      </ul>
+      <div class="tab-content mt-4">
+        <!-- Tabla de Usuarios -->
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+          <table *ngIf="showUsersTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id Servicio</th>
+                <th>Usuario Id</th>
+                <th>Nombre Servicio</th>
+                <th>Tipo Servicio</th>
+                <th>Terminos</th>
+                <th>Condiciones</th>
+                <th>Costo</th>
+                <th>Descripcion</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <!-- Agrega más columnas según tus necesidades -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let servicio of servicios">
+                <td>{{ servicio.idServicio }}</td>
+                <td>{{ servicio.usuarioID }}</td>
+                <td>{{ servicio.nombreServicio }}</td>
+                <td>{{ servicio.tipoServicio }}</td>
+                <td>{{ servicio.terminos }}</td>
+                <td>{{ servicio.condiciones }}</td>
+                <td>{{ servicio.costo }}</td>
+                <td>{{ servicio.descripcion }}</td>
+                <td>
+                  <!-- Botón de Editar(click)="editarUsuario(user.idUsuario) -->
+                  <a [routerLink]="['/editar-servicio', servicio.idUsuario]" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                  <button class="btn btn-danger" (click)="eliminarUsuario(servicio.idUsuario)">Eliminar</button>
+                </td>
+
+                <!-- Agrega más celdas según tus necesidades -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+          <a (click)="switchToUsersTable()" class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Comentarios</a>
+        </li>
+      </ul>
+      <div class="tab-content mt-4">
+        <!-- Tabla de Usuarios -->
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+          <table *ngIf="showUsersTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id Comentario</th>
+                <th>Descripcion</th>
+                <th>Usuario Id</th>
+                <th>Servicio Id</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <!-- Agrega más columnas según tus necesidades -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let comentario of comments">
+                <td>{{ comentario.idComentario }}</td>
+                <td>{{ comentario.descripcionComentario }}</td>
+                <td>{{ comentario.usuarioID }}</td>
+                <td>{{ comentario.servicioID }}</td>
+
+                <!-- Agrega más celdas según tus necesidades -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+          <a (click)="switchToUsersTable()" class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Citas</a>
+        </li>
+      </ul>
+      <div class="tab-content mt-4">
+        <!-- Tabla de Usuarios -->
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+          <table *ngIf="showUsersTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id Cita</th>
+                <th>Usuario Id</th>
+                <th>Horario</th>
+                <th>Dia</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <!-- Agrega más columnas según tus necesidades -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cita of citas">
+                <td>{{ cita.idCita }}</td>
+                <td>{{ cita.usuarioID }}</td>
+                <td>{{ cita.horario }}</td>
+                <td>{{ cita.dia }}</td>
+
+                <!-- Agrega más celdas según tus necesidades -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

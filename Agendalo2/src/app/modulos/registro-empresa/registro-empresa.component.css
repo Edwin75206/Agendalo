@@ -1,0 +1,23 @@
+select, label {
+    margin: 10px;
+}
+
+.container {
+    font-size: 18px;
+}
+
+button {
+    margin: 10px;
+    width: 100%;
+}
+
+.container-fluid {
+    background-image: url(../../../assets/fondo_empresa.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    text-align: center;
+}
